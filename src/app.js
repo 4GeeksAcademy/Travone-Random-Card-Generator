@@ -26,13 +26,13 @@
             const numberElement = cardElement.querySelector('.card-number');
             const suitElements = cardElement.querySelectorAll('.card-suit');
             
-            // Remove all suit classes
+            
             cardElement.classList.remove('heart', 'diamond', 'spade', 'club');
             
-            // Add the new suit class
+            
             cardElement.classList.add(card.suit.class);
             
-            // Update the center number and corner suit symbols
+            
             numberElement.textContent = card.number;
             suitElements.forEach(el => el.textContent = card.suit.symbol);
         }
@@ -76,7 +76,7 @@
             document.getElementById('timer').textContent = `Next card in: ${timeLeft}s`;
         }
 
-        // Initialize the card generator when the page loads
+     
         window.onload = function() {
             generateNewCard();
             startTimer();
